@@ -11,4 +11,6 @@ workflows:
           repo: nur02
           tag: latest
           region: '${AWS_REGION}'
+          
+          
 #           registry-id: AWS_ECR_REGISTRY_ID
