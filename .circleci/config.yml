@@ -11,4 +11,4 @@ workflows:
           repo: nur02
           tag: "${CIRCLE_SHA1}"
           region: '${AWS_REGION}'
-          registry-id: AWS_ECR_REGISTRY_ID
+#           registry-id: AWS_ECR_REGISTRY_ID
