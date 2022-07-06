@@ -11,4 +11,4 @@ workflows:
           repo: nur02
           tag: "${CIRCLE_SHA1}"
           region: us-east-1
-          registry-id: 294140702112
+#           registry-id: 294140702112
