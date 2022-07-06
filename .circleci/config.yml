@@ -11,4 +11,5 @@ workflows:
           repo: nur02
           tag: "${CIRCLE_SHA1}"
           region: us-east-1
+          account-url: 294140702112.dkr.ecr.us-east-1.amazonaws.com
 #           registry-id: 294140702112
