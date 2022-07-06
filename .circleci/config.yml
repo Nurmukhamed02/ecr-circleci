@@ -9,6 +9,6 @@ workflows:
     jobs:
       - aws-ecr/build-and-push-image:
           repo: nur02
-          tag: "${CIRCLE_SHA1}"
+          tag: latest
           region: '${AWS_REGION}'
 #           registry-id: AWS_ECR_REGISTRY_ID
