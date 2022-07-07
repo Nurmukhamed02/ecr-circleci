@@ -2,7 +2,21 @@ version: 2.1
 
 orbs:
   aws-ecr: circleci/aws-ecr@8.1.2
+  aws-cli: circleci/aws-cli@3.1.1
   
+jobs:
+   docker_build_and_push:
+     steps:
+      - checkout
+      - aws-cli/setup:
+          profile-name: default
+      - aws-cli/role-arn-setup:
+          role-arn: "arn:aws:iam::601817732895:role/circleci"
+          source-profile: default
+      - run: >-
+          aws sts assume-role --role-arn
+          "arn:aws:iam::601817732895:role/circleci" --role-session-name
+          "${CIRCLE_JOB}" 
 
 workflows:
   build-and-deploy:
@@ -11,8 +25,7 @@ workflows:
           repo: nur02
           tag: latest
           region: '${AWS_REGION}'
-          
-          
+
           
           
 #           registry-id: AWS_ECR_REGISTRY_ID
