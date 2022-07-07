@@ -19,13 +19,13 @@ jobs:
           "arn:aws:iam::601817732895:role/circleci" --role-session-name
           "${CIRCLE_JOB}" 
 
-workflows:
-  build-and-deploy:
-    jobs:
-      - aws-ecr/build-and-push-image:
-          repo: nur02
-          tag: latest
-          region: '${AWS_REGION}'
+# workflows:
+#   build-and-deploy:
+#     jobs:
+#       - aws-ecr/build-and-push-image:
+#           repo: nur02
+#           tag: latest
+#           region: '${AWS_REGION}'
 
           
           
