@@ -6,6 +6,7 @@ orbs:
   
 jobs:
    docker_build_and_push:
+     executor: aws-ecr/default
      steps:
       - checkout
       - aws-cli/setup:
