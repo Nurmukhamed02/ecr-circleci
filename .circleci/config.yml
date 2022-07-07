@@ -19,9 +19,10 @@ jobs:
           "arn:aws:iam::601817732895:role/circleci" --role-session-name
           "${CIRCLE_JOB}" 
 
-# workflows:
-#   build-and-deploy:
-#     jobs:
+workflows:
+  build-and-deploy:
+    jobs:
+      - docker_build_and_push
 #       - aws-ecr/build-and-push-image:
 #           repo: nur02
 #           tag: latest
